@@ -1,0 +1,22 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:AvaloniaTabControl"
+        Title="AvaloniaTabControl">
+  <TabControl>
+    <TabControl.DataTemplates>
+      <DataTemplate DataType="local:SampleViewModel">
+        <StackPanel Orientation="Vertical">
+          <TextBlock Text="SampleViewModel.."/>
+          <local:SampleView />
+        </StackPanel>
+      </DataTemplate>
+    </TabControl.DataTemplates>
+    <TabItem Header="Tab 1 - Content from DataTemplate">
+      <local:SampleViewModel />
+    </TabItem>
+    <TabItem Header="Tab 2" Content="Content for item 2"/>
+    <TabItem Header="Tab 3 - View without DataTemplate">
+      <local:SampleView />
+    </TabItem>
+  </TabControl>
+</Window>
